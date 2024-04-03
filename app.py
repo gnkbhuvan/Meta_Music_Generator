@@ -52,7 +52,7 @@ def save_audio(samples: torch.Tensor):
 
     for idx, audio in enumerate(samples):
         audio_path = os.path.join(save_path, f"audio_{idx}.wav")
-        torchaudio.save(audio_path, audio, sample_rate)
+        torchaudio.save(audio_path, audio, sample_rate=sample_rate)  # Specify sample_rate here
 
 def get_binary_file_downloader_html(bin_file, file_label='File'):
     with open(bin_file, 'rb') as f:
@@ -68,7 +68,7 @@ st.set_page_config(
 
 def main():
 
-    st.title("Music Generator🎵")
+    st.title(":red[AI Music Generator]")
 
     with st.expander("How is this app built?"):
         st.write("Music Generator app built using Meta's Audiocraft library. We are using Music Gen Small model.")
