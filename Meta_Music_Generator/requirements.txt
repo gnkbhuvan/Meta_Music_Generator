@@ -1,5 +1,0 @@
-numpy
-audiocraft
-streamlit
-torch
-torchaudio
