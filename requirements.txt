@@ -3,3 +3,4 @@ audiocraft
 streamlit
 torch
 torchaudio
+thinc
